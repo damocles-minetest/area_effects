@@ -11,7 +11,7 @@ minetest.register_chatcommand("area_effect_set", {
     params = "<ID> <key> <value>",
     description = "Sets an area attribute",
     func = function(playername, param)
-      local _, _, id_str, key, value = string.find(param, "^([^%s]+)%s+([^%s])%s+(.*)$")
+      local _, _, id_str, key, value = string.find(param, "^([^%s]+)%s+([^%s]+)%s+(.*)$")
       if id_str == nil or not key then
         return true, "Invalid syntax!"
       end
@@ -53,8 +53,12 @@ minetest.register_chatcommand("area_effect_get", {
         return true, "area-id is not numeric: " .. param
       end
 
-      local data = epic.data_area.get(id)
-      return true, "Area " .. id .. "\n" .. format_data(data)
+      local data = area_effects.get(id)
+      if not data then
+         return true, "No effects"
+      else
+         return true, "Area " .. id .. "\n" .. format_data(data)
+      end
     end
 })
 

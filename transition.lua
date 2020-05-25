@@ -32,6 +32,7 @@ local function check()
       if not active_entry[id] then
         -- player entered
         area_effects.run_hook("enter", { player, id })
+	active_entry[id] = true
       end
     end
 
@@ -40,6 +41,7 @@ local function check()
       if not current_ids[id] then
         -- player left
         area_effects.run_hook("leave", { player, id })
+	active_entry[id] = nil
       end
     end
   end

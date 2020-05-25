@@ -16,6 +16,7 @@ dofile(MP.."/accessors.lua")
 dofile(MP.."/transition.lua")
 dofile(MP.."/hooks.lua")
 dofile(MP.."/log.lua")
+dofile(MP.."/chatcommands.lua")
 
 if minetest.get_modpath("epic_skybox") then
   dofile(MP.."/integrations/epic_skybox.lua")
