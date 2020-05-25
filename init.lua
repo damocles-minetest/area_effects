@@ -20,3 +20,5 @@ dofile(MP.."/log.lua")
 if minetest.get_modpath("epic_skybox") then
   dofile(MP.."/integrations/epic_skybox.lua")
 end
+
+dofile(MP.."/integrations/day_night.lua")
