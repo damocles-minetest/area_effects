@@ -57,3 +57,15 @@ minetest.register_chatcommand("area_effect_get", {
       return true, "Area " .. id .. "\n" .. format_data(data)
     end
 })
+
+minetest.register_chatcommand("area_effects", {
+    description = "Lists the area effects",
+    func = function()
+      local str = ""
+      for key, description in pairs(area_effects.effects) do
+        str = str .. "+ " .. key .. ": " .. description .. "\n"
+      end
+
+      return true, str
+    end
+})

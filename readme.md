@@ -3,6 +3,8 @@ Area based effects
 
 # Chatcommands
 
+* **/area_effects** lists all area effects
+
 ## Skybox (epic_skybox)
 
 * **/skybox_list** List available skyboxes
