@@ -8,6 +8,10 @@ minetest.register_on_leaveplayer(function(player)
 	active[playername] = nil
 end)
 
+function area_effects.clear_player_cache(playername)
+	active[playername] = nil
+end
+
 local function check()
   for _, player in ipairs(minetest.get_connected_players()) do
     local ppos = player:get_pos()

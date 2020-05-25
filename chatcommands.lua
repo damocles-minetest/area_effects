@@ -34,6 +34,8 @@ minetest.register_chatcommand("area_effect_set", {
       data[key] = value
       area_effects.set(id, data)
 
+      area_effects.clear_player_cache(playername)
+
 			return true, "Area " .. id .. "\n" .. format_data(data)
     end,
 })
