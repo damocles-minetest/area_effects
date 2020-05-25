@@ -1,6 +1,7 @@
 
 globals = {
-	"area_effects"
+	"area_effects",
+	"epic_weather"
 }
 
 read_globals = {

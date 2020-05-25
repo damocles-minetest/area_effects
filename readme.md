@@ -11,3 +11,11 @@ Area based effects
 * **/area_effect_set skybox Plain Black** Set
 * **/area_effect_get skybox** Get
 * **/area_effect_set skybox false** Clear
+
+## day/night
+
+* **/area_effect_set day_night 0.4**
+
+## Weather (epic_weather)
+
+* **/area_effect_set weather Light rain**
