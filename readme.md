@@ -19,3 +19,7 @@ Area based effects
 ## Weather (epic_weather)
 
 * **/area_effect_set weather Light rain**
+
+## Clouds
+
+* **/area_effect_set no_clouds true**

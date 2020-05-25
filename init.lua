@@ -26,3 +26,4 @@ if minetest.get_modpath("epic_weather") then
 end
 
 dofile(MP.."/integrations/day_night.lua")
+dofile(MP.."/integrations/no_clouds.lua")
