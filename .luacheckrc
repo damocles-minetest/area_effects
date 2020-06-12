@@ -16,5 +16,5 @@ read_globals = {
 
 	-- deps
 	"epic", "epic_skybox",
-	"screwdriver", "areas"
+	"screwdriver", "areas", "soundblock"
 }

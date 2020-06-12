@@ -26,5 +26,9 @@ if minetest.get_modpath("epic_weather") then
   dofile(MP.."/integrations/epic_weather.lua")
 end
 
+if minetest.get_modpath("soundblock") then
+  dofile(MP.."/integrations/soundblock.lua")
+end
+
 dofile(MP.."/integrations/day_night.lua")
 dofile(MP.."/integrations/no_clouds.lua")
