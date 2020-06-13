@@ -75,3 +75,15 @@ minetest.register_on_leaveplayer(function(player)
 	local playername = player:get_player_name()
 	handles[playername] = nil
 end)
+
+minetest.register_chatcommand("area_effect_stopsound", {
+	description = "Stops the current area effect sound for the given player",
+	func = function(_, playername)
+    if handles[playername] then
+      -- clear sound
+      minetest.sound_stop(handles[playername])
+    end
+
+		return true
+	end
+})
