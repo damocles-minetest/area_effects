@@ -26,22 +26,26 @@ local function check()
     local area_list = areas:getAreasAtPos(ppos)
     local current_ids = {}
 
-    -- check areas
-    for id in pairs(area_list) do
+		-- mark current ids
+		for id in pairs(area_list) do
       current_ids[id] = true
-      if not active_entry[id] then
-        -- player entered
-        area_effects.run_hook("enter", { player, id })
-				active_entry[id] = true
-      end
     end
 
-    -- check previous area-ids
+		-- check previous area-ids
     for id in pairs(active_entry) do
       if not current_ids[id] then
         -- player left
         area_effects.run_hook("leave", { player, id })
 				active_entry[id] = nil
+      end
+    end
+
+    -- check new areas
+    for id in pairs(area_list) do
+      if not active_entry[id] then
+        -- player entered
+        area_effects.run_hook("enter", { player, id })
+				active_entry[id] = true
       end
     end
   end
