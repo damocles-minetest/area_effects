@@ -10,7 +10,7 @@ area_effects.register_hook({
           minetest.log(
             "action",
             "[area_effects] setting skybox " .. skyboxdef.name ..
-            " for player" .. player:get_player_name()
+            " for player " .. player:get_player_name()
           )
           epic_skybox.set_skybox(player, skyboxdef)
           break
@@ -24,8 +24,8 @@ area_effects.register_hook({
     if data and data.skybox then
       minetest.log(
         "action",
-        "[area_effects] clearing skybox " ..
-        " for player" .. player:get_player_name()
+        "[area_effects] clearing skybox" ..
+        " for player " .. player:get_player_name()
       )
       epic_skybox.set_skybox(player, {})
     end
