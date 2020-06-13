@@ -78,6 +78,7 @@ end)
 
 minetest.register_chatcommand("area_effect_stopsound", {
 	description = "Stops the current area effect sound for the given player",
+  privs = { areas = true },
 	func = function(_, playername)
     if handles[playername] then
       -- clear sound
