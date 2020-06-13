@@ -42,4 +42,4 @@ Mod: https://github.com/mt-mods/soundblock
 
 * **/area_effect_set [area_id] sound damocles_soundblock_ambient_1**
 * **/sound_list**
-* **/area_effect_stopsound [player]** stops the background sound for the given playername
+* **/area_effect_stopsound [player]** stops the background sound for the given playername (need the `areas` priv)
